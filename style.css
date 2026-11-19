@@ -24,7 +24,7 @@
  color-scheme:light;
  --paper:#f5f5f2;--ink:#252b27;--muted:#59635c;--link:#335442;--line:#d4d9d2;
  --serif:'Lora',Georgia,serif;--sans:'Inter','Segoe UI',Arial,sans-serif;
- --gutter:clamp(1.5rem,4vw,4rem);--page-width:1440px
+ --gutter:clamp(1.5rem,4vw,4rem);--page-width:1600px
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -38,16 +38,16 @@ a:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:2
 .header{padding:1.6rem var(--gutter)}
 .wordmark{font-family:var(--serif);font-weight:400;font-size:1.7rem;letter-spacing:-.035em;line-height:1.15;margin:0}
 .wordmark span{display:block;font-size:1.15rem;letter-spacing:-.02em;margin-top:.15rem}
-.card{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);background:#f9faf7}
-.visual{min-width:0;position:relative;background:#eeefec;overflow:hidden}
-.portrait{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:left 35%}
-.people{min-width:0;padding:clamp(2.5rem,4.5vw,4.5rem) clamp(2rem,4vw,4rem)}
-.headline{font-family:var(--serif);font-size:clamp(2.6rem,4.1vw,3.75rem);font-weight:400;letter-spacing:-.045em;line-height:1.08;margin:0}
+.card{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(0,1fr);position:relative;isolation:isolate;min-height:820px;background:#eeefec}
+.visual{position:absolute;inset:0;z-index:-1;min-width:0;background:#eeefec;overflow:hidden}
+.portrait{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:35% 35%}
+.people{grid-column:2;align-self:center;min-width:0;padding:3rem var(--gutter) 3rem 0}
+.headline{font-family:var(--serif);font-size:clamp(2.5rem,3.3vw,3.25rem);font-weight:400;letter-spacing:-.045em;line-height:1.08;margin:0}
 .summary{font-size:1.0625rem;color:var(--muted);line-height:1.65;max-width:30ch;margin:1.5rem 0 2.5rem}
 .profiles{display:grid;gap:1.5rem;border-top:1px solid var(--line);padding-top:1.75rem}
 .person{min-width:0}
 .person+.person{border-top:1px solid var(--line);padding-top:1.5rem}
-.person h2{font-family:var(--sans);font-size:1.125rem;font-weight:500;letter-spacing:-.02em;line-height:1.4;margin:0}
+.person h2{font-family:var(--serif);font-size:clamp(2.1rem,2.8vw,2.8rem);font-weight:400;letter-spacing:-.035em;line-height:1.12;margin:0}
 .person p{font-size:1rem;line-height:1.55;color:var(--muted);max-width:33ch;margin:.45rem 0 .4rem}
 .links{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}
 .person a{display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;font-weight:500}
@@ -61,10 +61,10 @@ a:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:2
 .registration dt{font-size:.75rem;letter-spacing:.035em;line-height:1.85;color:var(--muted)}
 .registration dd{font-size:.875rem;line-height:1.6;white-space:nowrap}
 @media(max-width:1000px){
- .card{grid-template-columns:minmax(0,1fr)}
- .visual{aspect-ratio:1.6;max-height:580px}
+ .card{grid-template-columns:minmax(0,1fr);min-height:0}
+ .visual{position:relative;inset:auto;z-index:auto;aspect-ratio:1.6;max-height:580px}
  .portrait{object-position:left 30%}
- .people{padding:2.5rem var(--gutter) 2.75rem}
+ .people{grid-column:1;padding:2.5rem var(--gutter) 2.75rem;background:var(--paper)}
  .headline{font-size:clamp(2.75rem,6vw,3.75rem)}
  .headline br{display:none}
  .summary{max-width:48ch;margin-bottom:2rem}
@@ -84,7 +84,7 @@ a:focus-visible{outline:2px solid var(--link);outline-offset:4px;border-radius:2
  .summary{font-size:1rem;max-width:34ch;margin:1.25rem 0 1.75rem}
  .profiles{grid-template-columns:minmax(0,1fr);padding-top:1.5rem;gap:1.25rem}
  .person+.person{border-top:1px solid var(--line);padding-top:1.25rem}
- .person h2{font-size:1.125rem}
+ .person h2{font-size:clamp(2rem,7.5vw,2.6rem)}
  .person p{max-width:34ch}
  .footer{grid-template-columns:minmax(0,1fr);row-gap:1.25rem;padding-block:1.5rem 1.75rem}
  .registration{grid-column:auto;grid-template-columns:minmax(0,1fr);gap:.2rem}
