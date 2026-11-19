@@ -17,6 +17,7 @@ const files = [
   '.nojekyll',
   'assets/favicon.svg',
   'assets/pawel-i-magda.jpg',
+  'assets/social-preview.png',
   'assets/fonts/inter-400.ttf',
   'assets/fonts/inter-500.ttf',
   'assets/fonts/lora-400.ttf',

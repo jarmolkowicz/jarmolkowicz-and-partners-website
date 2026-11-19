@@ -20,7 +20,7 @@ Wymagany Node.js 24 (w GitHub Actions jest ustawiany automatycznie).
 node scripts/prepare-pages.mjs
 ```
 
-Polecenie sprawdza lokalne odnośniki i kotwice, a następnie odtwarza katalog `_site/` z 10 jawnie wskazanych plików. Tylko ten katalog jest publikowany.
+Polecenie sprawdza lokalne odnośniki i kotwice, a następnie odtwarza katalog `_site/` z 11 jawnie wskazanych plików. Tylko ten katalog jest publikowany.
 
 Stronę można obejrzeć, otwierając `index.html` w przeglądarce. Nie trzeba tworzyć osobnego pliku podglądu.
 
