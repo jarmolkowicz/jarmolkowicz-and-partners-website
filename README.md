@@ -10,7 +10,7 @@ Statyczna wizytówka spółki. HTML, CSS i lokalne fonty. Bez instalowania pakie
 - `scripts/prepare-pages.mjs` – kontrola odnośników i przygotowanie plików do publikacji.
 - `.github/workflows/pages.yml` – automatyczne wdrożenie po zmianach na `main`.
 
-Folder `Versions/` przechowuje wcześniejsze warianty projektu i samodzielny podgląd HTML. Jest wersjonowany w Git, ale nie trafia do paczki publikacyjnej. Katalogi `_site/` i `.task-temp/` pozostają lokalne i są ignorowane przez Git.
+Katalogi `_site/` i `.task-temp/` pozostają lokalne i są ignorowane przez Git.
 
 ## Kontrola lokalna
 
